@@ -4,3 +4,8 @@ export interface TodoType {
   title: string;
   isComplete: boolean;
 }
+
+export interface StateType {
+  toggleForm: boolean;
+  todoUpdate: any;
+}

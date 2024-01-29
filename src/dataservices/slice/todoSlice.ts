@@ -1,9 +1,5 @@
+import { type StateType } from 'types/todoType';
 import { createSlice } from '@reduxjs/toolkit';
-
-interface StateType {
-  toggleForm: boolean;
-  todoUpdate: any;
-}
 
 const initialState: StateType = {
   toggleForm: true,
