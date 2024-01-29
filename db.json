@@ -1,0 +1,52 @@
+{
+  "todos": [
+    {
+      "title": "Todo pertama : membuat sate Padang",
+      "userId": 1,
+      "isComplete": false,
+      "id": 1
+    },
+    {
+      "title": "belajar python 2020",
+      "userId": 1,
+      "isComplete": false,
+      "id": 2
+    },
+    {
+      "title": "Hallo Boy 45678",
+      "userId": 1,
+      "isComplete": false,
+      "id": 3
+    },
+    {
+      "title": "addd Todo",
+      "userId": 1,
+      "isComplete": false,
+      "id": 4
+    },
+    {
+      "title": "add",
+      "userId": 1,
+      "isComplete": false,
+      "id": 5
+    },
+    {
+      "title": "s",
+      "userId": 1,
+      "isComplete": false,
+      "id": 6
+    },
+    {
+      "title": "s",
+      "userId": 1,
+      "isComplete": false,
+      "id": 7
+    },
+    {
+      "title": "asa",
+      "userId": 1,
+      "isComplete": false,
+      "id": 8
+    }
+  ]
+}

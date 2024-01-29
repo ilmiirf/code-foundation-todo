@@ -1,0 +1,15 @@
+{
+  "trans-salutation": "Hi {{name}}!",
+  "trans-start": {
+    "title": "Code Foundation React Web App",
+    "description1": "This application was built using the following technology:",
+    "description2": "React + Vite + Typescript + Redux Toolkit (RTK Query) + tailwind CSS + i18n",
+    "get-start": "Get Start"
+  },
+  "trans-login": {
+    "login": "Login",
+    "instruction": "Please fill in your registered email below",
+    "username": "username",
+    "password": "password"
+  }
+}

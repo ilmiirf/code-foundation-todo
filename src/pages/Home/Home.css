@@ -1,0 +1,19 @@
+.home-container {
+  @apply text-center mt-40;
+}
+
+.home__header {
+  @apply mb-12 text-6xl font-extrabold;
+}
+
+.home__body {
+  @apply text-base mb-6;
+}
+
+.home__sub-header {
+  @apply text-2xl font-medium mb-12;
+}
+
+.home__button {
+  @apply px-8 py-4 rounded-2xl mt-5;
+}
