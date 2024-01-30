@@ -1,7 +1,8 @@
 import {
-  CheckIcon,
+  CheckCircleIcon,
   PencilSquareIcon,
   TrashIcon,
+  XCircleIcon,
 } from '@heroicons/react/24/solid';
 import { type TodoCardViewInterface } from './SingleTodoCard.type';
 
@@ -20,11 +21,19 @@ const View = ({
       {todo.title}
     </h1>
     <div className="flex px-4 space-x-4">
-      <CheckIcon
-        className="w-6 h-6 text-green-700 cursor-pointer"
-        onClick={onDone}
-        id="button-check"
-      />
+      {isDone ? (
+        <XCircleIcon
+          className="w-6 h-6 text-gray-300 cursor-pointer"
+          onClick={onDone}
+          id="button-check"
+        />
+      ) : (
+        <CheckCircleIcon
+          className="w-6 h-6 text-green-700 cursor-pointer"
+          onClick={onDone}
+          id="button-check"
+        />
+      )}
       <PencilSquareIcon
         className="w-6 h-6 text-yellow-700 cursor-pointer"
         onClick={onUpdate}

@@ -5,7 +5,7 @@ export interface TodoCardInterface {
 }
 
 export interface TodoCardViewInterface extends TodoCardInterface {
-  onDone: () => void;
+  onDone: (e: React.FormEvent) => void;
   isDone: boolean;
   onDelete: (id: number) => void;
   onUpdate: () => void;

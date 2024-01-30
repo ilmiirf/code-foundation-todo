@@ -2,9 +2,8 @@
 import get from 'get-value';
 import config from '@/configs';
 
-const getConfig = (key: string, option?: any): unknown =>
-  get(config, key, option);
-const getEnv = (key: string, option?: any): unknown =>
+const getConfig = (key: string, option?: any): any => get(config, key, option);
+const getEnv = (key: string, option?: any): any =>
   get(import.meta.env, key, option);
 
 const isDevelopment = (): boolean => getEnv('NODE_ENV') === 'development';
