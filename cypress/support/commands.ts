@@ -35,3 +35,12 @@
 //     }
 //   }
 // }
+
+Cypress.Commands.add('login', (username: string, password: string) => {
+  cy.visit('/login');
+  cy.get('input[name="username"]').type(username);
+  cy.get('input[name="password"]').type(password);
+  cy.get('[data-test="login button"]').click();
+  cy.url().should('include', '/todo');
+  cy.wait(5000);
+});
