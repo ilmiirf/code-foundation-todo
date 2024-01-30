@@ -1,13 +1,14 @@
 import { Suspense } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import RouteLogger from './RouteLogger';
 import { privateRoute, publicRoute } from './routing.item';
-import HasLayout from 'viewport/HasLayout';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import PrivateRoute from './PrivateRoute';
 import PageNotFound from 'viewport/page/NotFound';
+import PageLoading from 'viewport/page/Loading';
+import HasLayout from 'viewport/HasLayout';
+import RouteLogger from './RouteLogger';
 
 const Scene = () => (
-  <Suspense>
+  <Suspense fallback={<PageLoading />}>
     <BrowserRouter>
       <RouteLogger>
         <Routes>

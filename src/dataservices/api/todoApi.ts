@@ -11,7 +11,7 @@ export const todoApi = createApi({
       query: () => '/todos',
       providesTags: ['todo'],
     }),
-    getTodoDetail: builder.query<TodoType, number>({
+    getTodoDetail: builder.query<TodoType, string>({
       query: (id) => `/todos/${id}`,
       providesTags: ['todo'],
     }),
@@ -24,10 +24,10 @@ export const todoApi = createApi({
       invalidatesTags: ['todo'],
     }),
     updateTodo: builder.mutation<TodoType, TodoType>({
-      query: (update) => ({
-        url: `/todos/${update.id}`,
+      query: (updates) => ({
+        url: `/todos/${updates.id}`,
         method: 'PUT',
-        body: update,
+        body: updates,
       }),
       invalidatesTags: ['todo'],
     }),

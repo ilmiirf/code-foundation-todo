@@ -7,13 +7,13 @@ import UpdateTodo from './UpdateTodo';
 
 const View = ({ data, toggleForm }: TodoInterface) => (
   <main>
-    <Card className="w-2/3 lg:w-1/2 mx-auto p-8 mt-12 min-h-72">
+    <Card className="w-2/3 p-8 mx-auto mt-12 lg:w-1/2 min-h-72">
       {toggleForm ? (
         <>
           <AddTodo />
-          <ul className=" mt-6">
+          <ul className="mt-6 " id="list-todo">
             {data?.map((todo) => (
-              <li key={todo.id}>
+              <li key={todo.id} id="todo-item">
                 <SingleTodoCard todo={todo} />
               </li>
             ))}

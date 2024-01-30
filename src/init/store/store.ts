@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-var-requires */
+
 import { configureStore } from '@reduxjs/toolkit';
 import {
   persistStore,
@@ -36,7 +39,6 @@ if (isDevelopment() && module.hot) {
   // @ts-expect-error
   module.hot.accept('init/store.rootReducer', () => {
     // This fetches the new state of the above reducers.
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
     const nextRootReducer = require('init/store.rootReducer').default;
     store.replaceReducer(persistReducer(persistConfig, nextRootReducer));
   });

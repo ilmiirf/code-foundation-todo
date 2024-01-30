@@ -25,6 +25,7 @@ const View = ({
       className="!absolute right-1 top-1 rounded"
       onClick={onUpdateTodo}
       color="deep-orange"
+      id="submit-update"
     >
       Update
     </Button>

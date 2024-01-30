@@ -12,9 +12,8 @@ const UpdateTodo = () => {
   const [todo, setTodo] = useState(todoToUpdate.todo);
   const dispatch = useDispatch();
 
-  console.log('change', todo);
   const handleChange = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
-    setTodo((prev: any) => ({
+    setTodo((prev: object) => ({
       ...prev,
       [target.name]: target.value,
     }));
@@ -25,9 +24,7 @@ const UpdateTodo = () => {
     if (/^\s*$/.test(todo.title)) {
       toast.error('enter todo');
     } else {
-      console.log('is');
       try {
-        console.log('update', todo);
         await updateTodo(todo);
         dispatch(toggleInputForm({ todo }));
       } catch {

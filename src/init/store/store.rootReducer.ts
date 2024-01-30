@@ -1,8 +1,8 @@
-import { combineReducers } from '@reduxjs/toolkit';
 import todoApi from 'api/todoApi';
 import authApi from 'api/authApi';
 import authReducer from 'slice/authSlice';
 import todoReducer from 'slice/todoSlice';
+import { combineReducers } from '@reduxjs/toolkit';
 
 const rootReducer = combineReducers({
   auth: authReducer,

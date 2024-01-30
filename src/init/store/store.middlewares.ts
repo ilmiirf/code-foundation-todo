@@ -1,6 +1,6 @@
 import todoApi from 'api/todoApi';
 import authApi from 'api/authApi';
 
-const middlewares = [todoApi.middleware, authApi.middleware];
+const middllewares = [todoApi.middleware, authApi.middleware];
 
-export default middlewares;
+export default middllewares;

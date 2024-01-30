@@ -1,7 +1,6 @@
 export interface LoginInterface {
   username: string;
   password: string;
-  handleChange: (e: any) => void;
+  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleLogin: () => void;
-  t: any;
 }

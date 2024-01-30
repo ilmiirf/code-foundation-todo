@@ -1,7 +1,7 @@
 import React from 'react';
 import View from './Navbar.view';
 import { useAppSelector } from 'helpers/useAppSelector';
-import { logout, selectAuth } from 'slice/authSlice';
+import { logout, selectAuth } from 'dataservices/slice/authSlice';
 import { useNavigate } from 'react-router-dom';
 import { useAppDispatch } from 'helpers/useAppDispatch';
 import { toast } from 'react-toastify';

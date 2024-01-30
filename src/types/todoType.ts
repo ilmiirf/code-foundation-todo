@@ -7,5 +7,5 @@ export interface TodoType {
 
 export interface StateType {
   toggleForm: boolean;
-  todoUpdate: any;
+  todoUpdate: object;
 }

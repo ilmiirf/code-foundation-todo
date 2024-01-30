@@ -12,22 +12,28 @@ const View = ({
   onDelete,
   onUpdate,
 }: TodoCardViewInterface) => (
-  <div className="flex justify-between bg-slate-100 p-2 rounded shadow my-2">
-    <h1 className={isDone ? 'font-semibold line-through' : 'font-semibold'}>
+  <div className="flex justify-between p-2 my-2 rounded shadow bg-slate-100">
+    <h1
+      id="todo-title"
+      className={isDone ? 'font-semibold line-through' : 'font-semibold'}
+    >
       {todo.title}
     </h1>
-    <div className="px-4 flex space-x-4">
+    <div className="flex px-4 space-x-4">
       <CheckIcon
-        className="w-6 h-6 cursor-pointer text-green-700"
+        className="w-6 h-6 text-green-700 cursor-pointer"
         onClick={onDone}
+        id="button-check"
       />
       <PencilSquareIcon
-        className="w-6 h-6 cursor-pointer text-yellow-700"
+        className="w-6 h-6 text-yellow-700 cursor-pointer"
         onClick={onUpdate}
+        id="button-edit"
       />
       <TrashIcon
-        className="w-6 h-6cursor-pointer text-red-700"
+        className="w-6 text-red-700 h-6cursor-pointer"
         onClick={() => onDelete(todo.id)}
+        id="button-delete"
       />
     </div>
   </div>

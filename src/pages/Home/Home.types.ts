@@ -1,4 +1,4 @@
 export interface HomeInterface {
   navigate: () => void;
-  t: any;
+  t: unknown;
 }

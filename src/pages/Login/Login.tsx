@@ -22,7 +22,7 @@ const Login = () => {
   const [loginUser, { data: loginData, isSuccess, isError, error }] =
     useLoginMutation();
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormValue({ ...formValue, [e.target.name]: e.target.value });
   };
 
