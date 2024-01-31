@@ -19,7 +19,7 @@ const Login = () => {
 
   const { username, password } = formValue;
 
-  const [loginUser, { data: loginData, isSuccess, isError, error }] =
+  const [loginUser, { data: loginData, isSuccess, isError }] =
     useLoginMutation();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -42,7 +42,7 @@ const Login = () => {
 
   useEffect(() => {
     if (isError) {
-      toast.error((error as any).data.message);
+      toast.error('Invalid credentials');
     }
   }, [isError]);
 

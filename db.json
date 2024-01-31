@@ -17,6 +17,18 @@
       "userId": 1,
       "isComplete": false,
       "id": 3
+    },
+    {
+      "title": "todo testing cypress",
+      "userId": 1,
+      "isComplete": true,
+      "id": 4
+    },
+    {
+      "title": "todo testing cypress setelah update",
+      "userId": 1,
+      "isComplete": false,
+      "id": 5
     }
   ]
 }

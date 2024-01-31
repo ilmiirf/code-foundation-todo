@@ -1,12 +1,7 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-var-requires */
 
 import { configureStore } from '@reduxjs/toolkit';
-import {
-  persistStore,
-  persistReducer,
-  type PersistConfig,
-} from 'redux-persist';
+import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import { PersistGate } from 'redux-persist/integration/react';
 import { setupListeners } from '@reduxjs/toolkit/query';
@@ -14,7 +9,7 @@ import { getConfig, isDevelopment } from 'init/config';
 import rootReducer from './store.rootReducer';
 import middlewares from './store.middlewares';
 
-const persistConfig: PersistConfig<any> = {
+const persistConfig = {
   key: getConfig('statePersistKey'),
   storage,
 };
