@@ -3,7 +3,7 @@
     {
       "title": "Masak Nasgor",
       "userId": 1,
-      "isComplete": true,
+      "isComplete": false,
       "id": 1
     },
     {
@@ -13,22 +13,16 @@
       "id": 2
     },
     {
-      "title": "Makan",
+      "title": "Makan pagi",
       "userId": 1,
       "isComplete": false,
       "id": 3
     },
     {
-      "title": "todo testing cypress",
-      "userId": 1,
-      "isComplete": true,
-      "id": 4
-    },
-    {
-      "title": "todo testing cypress setelah update",
+      "title": "hellob",
       "userId": 1,
       "isComplete": false,
-      "id": 5
+      "id": 4
     }
   ]
 }

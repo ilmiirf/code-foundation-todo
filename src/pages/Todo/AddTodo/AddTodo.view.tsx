@@ -1,5 +1,7 @@
 import { Button, Input } from '@material-tailwind/react';
 import { type AddTodoInterface } from './AddTodo.types';
+import { withTranslation } from 'react-i18next';
+import { memo } from 'react';
 
 const View = ({ data, onSubmitTodo, onInputChange }: AddTodoInterface) => (
   <div className="relative flex w-full">

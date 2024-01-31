@@ -1,5 +1,7 @@
 import { Button, Input } from '@material-tailwind/react';
 import { type UpdateTodoViewInterface } from './UpdateTodo.type';
+import { withTranslation } from 'react-i18next';
+import { memo } from 'react';
 
 const View = ({
   title,
@@ -32,4 +34,4 @@ const View = ({
   </div>
 );
 
-export default View;
+export default memo(withTranslation()(View));

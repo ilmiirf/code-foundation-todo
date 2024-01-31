@@ -5,6 +5,7 @@ import {
   XCircleIcon,
 } from '@heroicons/react/24/solid';
 import { type TodoCardViewInterface } from './SingleTodoCard.type';
+import { memo } from 'react';
 
 const View = ({
   todo,
@@ -48,4 +49,4 @@ const View = ({
   </div>
 );
 
-export default View;
+export default memo(View);

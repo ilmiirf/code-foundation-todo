@@ -1,26 +1,29 @@
 import { Card, Input, Button, Typography } from '@material-tailwind/react';
 import './Login.css';
 import { type LoginInterface } from './Login.types';
+import { withTranslation } from 'react-i18next';
+import { memo } from 'react';
 
 const View = ({
   username,
   password,
   handleChange,
   handleLogin,
+  t,
 }: LoginInterface) => {
   return (
     <div className="login-container">
       <Card color="white" shadow={true} className="p-8">
         <Typography variant="h4" color="blue-gray">
-          Login
+          {t('trans-login.login')}
         </Typography>
         <Typography color="gray" className="mt-1 font-normal">
-          Please fill in your registered email below
+          {t('trans-login.instruction')}
         </Typography>
         <form className="max-w-screen-lg mt-8 mb-2 w-80 sm:w-96">
           <div className="flex flex-col gap-6 mb-1">
             <Typography variant="h6" color="blue-gray" className="-mb-3">
-              Your Username
+              {t('trans-login.username')}
             </Typography>
             <Input
               size="lg"
@@ -35,7 +38,7 @@ const View = ({
               crossOrigin={undefined}
             />
             <Typography variant="h6" color="blue-gray" className="-mb-3">
-              Password
+              {t('trans-login.password')}
             </Typography>
             <Input
               type="password"
@@ -59,7 +62,7 @@ const View = ({
             placeholder={undefined}
             data-test="login button"
           >
-            Login
+            {t('trans-login.login')}
           </Button>
         </form>
       </Card>
@@ -67,4 +70,4 @@ const View = ({
   );
 };
 
-export default View;
+export default memo(withTranslation()(View));
