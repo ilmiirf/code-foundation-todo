@@ -2,21 +2,21 @@ import { useDeleteTodoMutation, useUpdateTodoMutation } from 'api/todoApi';
 import View from './SingleTodoCard.view';
 import { type TodoCardInterface } from './SingleTodoCard.type';
 import { useDispatch } from 'react-redux';
-
 import { toggleInputForm } from 'slice/todoSlice';
+import { useCallback } from 'react';
 
 const SingleTodoCard = ({ todo }: TodoCardInterface) => {
   const [updateTodo] = useUpdateTodoMutation();
   const dispatch = useDispatch();
-  // const [done, setDone] = useState(todo.isComplete);
   const [deleteTodo] = useDeleteTodoMutation();
-  const handlerUpdateDone = async () => {
-    await updateTodo({ ...todo, isComplete: !todo.isComplete });
-  };
 
-  const handleUpdate = () => {
+  const handlerUpdateDone = useCallback(async () => {
+    await updateTodo({ ...todo, isComplete: !todo.isComplete });
+  }, [todo.isComplete]);
+
+  const handleUpdate = useCallback(() => {
     dispatch(toggleInputForm({ todo }));
-  };
+  }, [todo]);
 
   return (
     <View
