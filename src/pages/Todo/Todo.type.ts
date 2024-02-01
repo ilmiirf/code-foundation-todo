@@ -1,6 +1,6 @@
 import { type TodoType } from 'types/todoType';
 
 export interface TodoInterface {
-  data: TodoType[] | undefined;
+  todos: TodoType[] | undefined;
   toggleForm: boolean;
 }

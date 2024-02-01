@@ -30,4 +30,4 @@ const View = ({ data, onSubmitTodo, onInputChange }: AddTodoInterface) => (
   </div>
 );
 
-export default View;
+export default memo(withTranslation()(View));

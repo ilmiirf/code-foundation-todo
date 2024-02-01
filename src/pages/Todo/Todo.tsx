@@ -6,7 +6,7 @@ import { type RootState } from 'init/store/store';
 const TodoPage = () => {
   const toggleForm = useSelector((state: RootState) => state.todo.toggleForm);
   const { data: todos } = useGetTodosQuery();
-  return <View data={todos} toggleForm={toggleForm} />;
+  return <View todos={todos} toggleForm={toggleForm} />;
 };
 
 export default TodoPage;

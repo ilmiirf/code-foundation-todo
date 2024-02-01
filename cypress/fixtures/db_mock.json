@@ -1,0 +1,22 @@
+{
+  "todos": [
+    {
+      "title": "Masak Nasgor",
+      "userId": 1,
+      "isComplete": false,
+      "id": 1
+    },
+    {
+      "title": "Berkebun",
+      "userId": 1,
+      "isComplete": false,
+      "id": 2
+    },
+    {
+      "title": "Makan pagi",
+      "userId": 1,
+      "isComplete": true,
+      "id": 3
+    }
+  ]
+}

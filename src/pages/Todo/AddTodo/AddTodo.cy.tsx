@@ -18,12 +18,9 @@ describe('Todo component', () => {
     );
   });
 
-  it('render todo component dan ubah inputan add todo', () => {
-    cy.get('input[name="title"]').type('todo testing cypress');
-    cy.get('input[name="title"]').should('have.value', 'todo testing cypress');
-  });
   it('berhassil menambhkan todo', () => {
     cy.get('input[name="title"]').type('todo testing cypress');
+    cy.get('input[name="title"]').should('have.value', 'todo testing cypress');
     cy.contains('Submit').click();
   });
 });
