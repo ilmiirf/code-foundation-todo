@@ -4,7 +4,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import HasReduxStore from '@/viewport/HasReduxStore';
 import TodoPage from './Todo';
 
-const storeWrappedMount = (WrappedComponent: React.ReactNode, options = {}) =>
+const storeWrappedMount = (WrappedComponent: React.ReactNode, options = {}) => {
+  // cy.exec('npx json-server --watch db.json');
   cy.mount(
     <HasReduxStore>
       <ToastContainer />
@@ -12,6 +13,7 @@ const storeWrappedMount = (WrappedComponent: React.ReactNode, options = {}) =>
     </HasReduxStore>,
     options,
   );
+};
 
 describe('Todo component', () => {
   // it('verify the request returns the correct status code', () => {
@@ -27,7 +29,7 @@ describe('Todo component', () => {
       },
       { fixture: 'db_mock.json', delay: 100 },
     ).as('getTodos');
-    storeWrappedMount(<TodoPage />);
+    // storeWrappedMount(<TodoPage />);
   });
   it('berhasil add todo', () => {
     storeWrappedMount(<TodoPage />);
@@ -57,5 +59,20 @@ describe('Todo component', () => {
       .last()
       .find('#todo-title')
       .should('have.class', 'font-semibold', 'line-through');
+  });
+  it('berhasil update todo', () => {
+    storeWrappedMount(<TodoPage />);
+    cy.get('input[name="title"]').type('todo testing cypress sebelum update');
+    cy.contains('Submit').click();
+    cy.wait(1000);
+    cy.get('li').last().find('#button-edit').click();
+    cy.get('input[name="title"]')
+      .clear()
+      .type('todo testing cypress setelah update');
+    cy.get('#submit-update').click();
+    cy.wait(1000);
+    cy.get('li')
+      .last()
+      .should('contain.text', 'todo testing cypress setelah update');
   });
 });
