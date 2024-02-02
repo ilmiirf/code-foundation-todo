@@ -4,7 +4,10 @@ import 'react-toastify/dist/ReactToastify.css';
 import HasReduxStore from '@/viewport/HasReduxStore';
 import UpdateTodo from './UpdateTodo';
 
-const storeWrappedMount = (WrappedComponent: React.ReactNode, options = {}) =>
+import { useDispatch } from 'react-redux';
+import { toggleInputForm } from 'slice/todoSlice';
+
+const storeWrappedMount = (WrappedComponent: React.ReactNode, options = {}) => {
   cy.mount(
     <HasReduxStore>
       <ToastContainer />
@@ -12,9 +15,23 @@ const storeWrappedMount = (WrappedComponent: React.ReactNode, options = {}) =>
     </HasReduxStore>,
     options,
   );
+};
+
+const mockTodo = {
+  title: 'hello',
+  userId: 1,
+  isComplete: false,
+  id: 1,
+};
+
+const dispatch = useDispatch();
+const handleUpdate = () => {
+  dispatch(toggleInputForm({ mockTodo }));
+};
 
 describe('Update Todo Components', () => {
   it('render update todo component', () => {
+    handleUpdate();
     storeWrappedMount(<UpdateTodo />);
   });
 });
