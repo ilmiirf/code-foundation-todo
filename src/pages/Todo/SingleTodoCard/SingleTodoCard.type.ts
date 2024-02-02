@@ -1,10 +1,10 @@
-import { type TodoType } from '@/types/todoType';
+import { type Todo } from '@/types/todoType';
 
-export interface TodoCardInterface {
-  todo: TodoType;
+export interface TodoData {
+  todo: Todo;
 }
 
-export interface TodoCardViewInterface extends TodoCardInterface {
+export interface TodoCardProps extends TodoData {
   onDone: (e: React.FormEvent) => void;
   isDone: boolean;
   onDelete: (id: number) => void;

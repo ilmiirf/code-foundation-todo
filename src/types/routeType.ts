@@ -1,6 +1,6 @@
 import { type ReactNode, type FunctionComponentElement } from 'react';
 
-export interface RouteType {
+export interface Route {
   label: string;
   icon?: ReactNode;
   element: FunctionComponentElement<{}> | null;

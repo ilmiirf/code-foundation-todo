@@ -1,7 +1,7 @@
-import { type RouteType } from 'types/routeType';
+import { type Route } from 'types/routeType';
 import { createElement, lazy } from 'react';
 
-export const publicRoute: RouteType[] = [
+export const publicRoute: Route[] = [
   {
     label: 'Home',
     element: createElement(lazy(async () => await import('pages/Home/'))),
@@ -14,7 +14,7 @@ export const publicRoute: RouteType[] = [
   },
 ];
 
-export const privateRoute: RouteType[] = [
+export const privateRoute: Route[] = [
   {
     label: 'Todo',
     element: createElement(lazy(async () => await import('pages/Todo/'))),

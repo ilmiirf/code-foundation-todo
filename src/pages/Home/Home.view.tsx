@@ -1,10 +1,10 @@
 import './Home.css';
-import { type HomeInterface } from './Home.types';
+import { type HomeProps } from './Home.type';
 import { Typography, Button } from '@material-tailwind/react';
 import { withTranslation } from 'react-i18next';
 import { memo } from 'react';
 
-const View = ({ navigate, t }: HomeInterface) => (
+const View = ({ navigate, t }: HomeProps) => (
   <main className="home-container">
     <Typography className="home__header">{t('trans-start.title')}</Typography>
     <Typography className="home__body">

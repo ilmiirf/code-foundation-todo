@@ -8,14 +8,14 @@ import {
   IconButton,
 } from '@material-tailwind/react';
 import { Bars2Icon } from '@heroicons/react/24/solid';
-import { type ProtectedNavbarInterface } from './Navbar.types';
+import { type ProtectedNavbarProps } from './Navbar.type';
 
 const View = ({
   toggleIsNavOpen,
   isNavOpen,
   logout,
   name,
-}: ProtectedNavbarInterface) => (
+}: ProtectedNavbarProps) => (
   <Navbar className="sticky top-0 z-10 max-w-full px-4 py-2 rounded-none h-max lg:px-8 lg:py-4">
     <div className="relative flex items-center justify-between mx-auto text-blue-gray-900">
       <Typography

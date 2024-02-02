@@ -1,7 +1,7 @@
-import { type TodoType } from 'types/todoType';
+import { type Todo } from 'types/todoType';
 
-export interface AddTodoInterface {
-  data: Pick<TodoType, 'title'>;
+export interface AddTodoProps {
+  data: Pick<Todo, 'title'>;
   onInputChange: ({ target }: React.ChangeEvent<HTMLInputElement>) => void;
   onSubmitTodo: (event: React.FormEvent) => void;
 }

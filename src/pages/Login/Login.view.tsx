@@ -1,6 +1,6 @@
 import { Card, Input, Button, Typography } from '@material-tailwind/react';
 import './Login.css';
-import { type LoginInterface } from './Login.types';
+import { type LoginProps } from './Login.type';
 import { withTranslation } from 'react-i18next';
 import { memo } from 'react';
 
@@ -10,7 +10,7 @@ const View = ({
   handleChange,
   handleLogin,
   t,
-}: LoginInterface) => {
+}: LoginProps) => {
   return (
     <div className="login-container">
       <Card color="white" shadow={true} className="p-8">

@@ -3,12 +3,12 @@ export interface AuthState {
   token: string | null;
 }
 
-export interface LoginRequestType {
+export interface LoginRequest {
   username: string;
   password: string;
 }
 
-export interface LoginResponseType {
+export interface LoginResponse {
   id: number;
   username: string;
   email: string;

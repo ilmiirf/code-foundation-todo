@@ -1,4 +1,4 @@
-import TodoPage from './Todo';
+import Todo from './Todo';
 
-export { TodoPage };
-export default TodoPage;
+export { Todo };
+export default Todo;

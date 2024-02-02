@@ -1,10 +1,10 @@
-export interface ProfileMenuInterface {
+export interface ProfileMenuProps {
   isMenuOpen: boolean;
   setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
   closeMenu: () => void;
   logout: () => void;
 }
 
-export interface LogoutType {
+export interface Logout {
   logout: () => void;
 }

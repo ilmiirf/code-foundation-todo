@@ -1,11 +1,11 @@
 import { useDeleteTodoMutation, useUpdateTodoMutation } from 'api/todoApi';
 import View from './SingleTodoCard.view';
-import { type TodoCardInterface } from './SingleTodoCard.type';
+import { type TodoData } from './SingleTodoCard.type';
 import { useDispatch } from 'react-redux';
 import { toggleInputForm } from 'slice/todoSlice';
 import { useCallback } from 'react';
 
-const SingleTodoCard = ({ todo }: TodoCardInterface) => {
+const SingleTodoCard = ({ todo }: TodoData) => {
   const [updateTodo] = useUpdateTodoMutation();
   const dispatch = useDispatch();
   const [deleteTodo] = useDeleteTodoMutation();

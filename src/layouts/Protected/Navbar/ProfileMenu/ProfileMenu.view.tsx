@@ -7,7 +7,7 @@ import {
   MenuItem,
   Avatar,
 } from '@material-tailwind/react';
-import { type ProfileMenuInterface } from './ProfileMenu.types';
+import { type ProfileMenuProps } from './ProfileMenu.type';
 import {
   ChevronDownIcon,
   UserCircleIcon,
@@ -19,7 +19,7 @@ const View = ({
   setIsMenuOpen,
   closeMenu,
   logout,
-}: ProfileMenuInterface) => (
+}: ProfileMenuProps) => (
   <div className="flex items-center gap-2">
     <Menu open={isMenuOpen} handler={setIsMenuOpen} placement="bottom-end">
       <MenuHandler>
@@ -45,10 +45,10 @@ const View = ({
       </MenuHandler>
       <MenuList className="p-1">
         <MenuItem className="flex items-center gap-2 rounded hover:bg-red-500/10 focus:bg-red-500/10 active:bg-red-500/10">
-          <UserCircleIcon className="h-4 w-4" />
+          <UserCircleIcon className="w-4 h-4" />
           <Typography
             variant="small"
-            className="font-normal text-xs"
+            className="text-xs font-normal"
             onClick={closeMenu}
           >
             My Profile
@@ -58,8 +58,8 @@ const View = ({
           className="flex items-center gap-2 rounded hover:bg-red-500/10 focus:bg-red-500/10 active:bg-red-500/10"
           onClick={logout}
         >
-          <PowerIcon className="h-4 w-4" />
-          <Typography variant="small" className="font-normal text-xs">
+          <PowerIcon className="w-4 h-4" />
+          <Typography variant="small" className="text-xs font-normal">
             Logout
           </Typography>
         </MenuItem>

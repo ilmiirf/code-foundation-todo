@@ -1,6 +1,6 @@
 import { type TFunction } from 'i18next';
 
-export interface LoginInterface {
+export interface LoginProps {
   username: string;
   password: string;
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;

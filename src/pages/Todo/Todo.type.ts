@@ -1,6 +1,6 @@
-import { type TodoType } from 'types/todoType';
+import { type Todo } from 'types/todoType';
 
-export interface TodoInterface {
-  todos: TodoType[] | undefined;
+export interface TodoProps {
+  todos: Todo[] | undefined;
   toggleForm: boolean;
 }

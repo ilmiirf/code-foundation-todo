@@ -4,16 +4,10 @@ import {
   TrashIcon,
   XCircleIcon,
 } from '@heroicons/react/24/solid';
-import { type TodoCardViewInterface } from './SingleTodoCard.type';
+import { type TodoCardProps } from './SingleTodoCard.type';
 import { memo } from 'react';
 
-const View = ({
-  todo,
-  onDone,
-  isDone,
-  onDelete,
-  onUpdate,
-}: TodoCardViewInterface) => (
+const View = ({ todo, onDone, isDone, onDelete, onUpdate }: TodoCardProps) => (
   <div className="flex justify-between p-2 my-2 rounded shadow bg-slate-100">
     <h1
       id="todo-title"

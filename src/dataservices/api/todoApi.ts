@@ -1,5 +1,5 @@
 import { createApi } from '@reduxjs/toolkit/query/react';
-import { type TodoType } from 'types/todoType';
+import { type Todo } from 'types/todoType';
 import { dataBaseQuery } from 'init/baseQuery';
 
 export const todoApi = createApi({
@@ -7,15 +7,15 @@ export const todoApi = createApi({
   baseQuery: dataBaseQuery,
   tagTypes: ['todo'],
   endpoints: (builder) => ({
-    getTodos: builder.query<TodoType[], void>({
+    getTodos: builder.query<Todo[], void>({
       query: () => '/todos',
       providesTags: ['todo'],
     }),
-    getTodoDetail: builder.query<TodoType, string>({
+    getTodoDetail: builder.query<Todo, string>({
       query: (id) => `/todos/${id}`,
       providesTags: ['todo'],
     }),
-    addTodo: builder.mutation<TodoType, Partial<TodoType>>({
+    addTodo: builder.mutation<Todo, Partial<Todo>>({
       query: (newTodo) => ({
         url: '/todos',
         method: 'POST',
@@ -23,7 +23,7 @@ export const todoApi = createApi({
       }),
       invalidatesTags: ['todo'],
     }),
-    updateTodo: builder.mutation<TodoType, TodoType>({
+    updateTodo: builder.mutation<Todo, Todo>({
       query: (updates) => ({
         url: `/todos/${updates.id}`,
         method: 'PUT',

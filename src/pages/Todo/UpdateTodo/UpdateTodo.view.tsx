@@ -1,13 +1,9 @@
 import { Button, Input } from '@material-tailwind/react';
-import { type UpdateTodoViewInterface } from './UpdateTodo.type';
+import { type UpdateTodoProps } from './UpdateTodo.type';
 import { withTranslation } from 'react-i18next';
 import { memo } from 'react';
 
-const View = ({
-  title,
-  onUpdateTodo,
-  onInputChange,
-}: UpdateTodoViewInterface) => (
+const View = ({ title, onUpdateTodo, onInputChange }: UpdateTodoProps) => (
   <div className="relative flex w-full">
     <Input
       type="text"

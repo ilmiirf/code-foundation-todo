@@ -1,7 +1,7 @@
 import { Button, Navbar, Typography } from '@material-tailwind/react';
-import { type PublicNavbarInterface } from './Navbar.types';
+import { type PublicNavbarProps } from './Navbar.type';
 
-const View = ({ navigate }: PublicNavbarInterface) => (
+const View = ({ navigate }: PublicNavbarProps) => (
   <Navbar className="sticky top-0 z-10 max-w-full px-4 py-2 rounded-none h-max lg:px-8 lg:py-4">
     <div className="relative flex items-center justify-between mx-auto text-blue-gray-900">
       <Typography
