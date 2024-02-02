@@ -1,5 +1,5 @@
 import { Button, Input } from '@material-tailwind/react';
-import { type AddTodoProps } from './AddTodo.types';
+import { type AddTodoProps } from './AddTodo.type';
 import { withTranslation } from 'react-i18next';
 import { memo } from 'react';
 
